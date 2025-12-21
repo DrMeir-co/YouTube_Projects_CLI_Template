@@ -9,6 +9,12 @@ def replace_in_file(path: Path, old: str, new: str, title_old: str, title_new: s
 	txt = path.read_text(encoding="utf-8")
 	txt = txt.replace(old, new)
 	txt = txt.replace(title_old, title_new)
+	# If README.md, replace its first line with a heading containing the new name and description
+	if path.name == "README.md":
+		lines = txt.splitlines()
+		if lines:
+			lines[0] = (f"# {new} — {new_desc or ''}").title()
+			txt = "\n".join(lines)
 	if path.name == "pyproject.toml" and new_desc:
 		lines = txt.splitlines()
 		for i, ln in enumerate(lines):
@@ -49,4 +55,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
