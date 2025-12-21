@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "juicy_tool_name"
 version = "0.0.0"
-description = "juicy_tool_name investing simulator"
+description = "juicy_tool_name does very cool stuff."
 requires-python = ">=3.8"
 dependencies = ["typer"]
 
