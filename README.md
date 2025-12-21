@@ -1,4 +1,4 @@
-# Keel — investing simulator
+# Juicy_Tool_Name — does very cool stuff!
 
 Requirements: Python 3.8+
 
@@ -11,5 +11,5 @@ pip install -e .
 Learn how to use:
 
 ```bash
-keel --help
+juicy_tool_name --help
 ```
