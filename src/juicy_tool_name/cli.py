@@ -1,13 +1,11 @@
 import typer
-from . import logic
 
 app = typer.Typer()
 
-
 @app.command()
 def foo():
-    """Call logic.foo"""
-    logic.foo()
+    # call code from a module implementing the actual logic
+    print("In CLI")
 
 
 if __name__ == "__main__":
