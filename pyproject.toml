@@ -9,10 +9,10 @@ description = "investment policies simulator"
 requires-python = ">=3.8"
 dependencies = ["typer"]
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
     "ruff",
-    "mypy",
+    "ty",
     "pytest",
     "pytest-cov",
     "pre-commit",
