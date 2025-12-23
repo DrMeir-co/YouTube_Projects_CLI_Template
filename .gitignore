@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 
 # Virtual environment
-venv/
+.venv/
 
 # Package metadata (egg-info created during local builds)
 *.egg-info/
