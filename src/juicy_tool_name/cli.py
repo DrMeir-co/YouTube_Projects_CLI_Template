@@ -7,6 +7,5 @@ def foo():
     # call code from a module implementing the actual logic
     print("In CLI")
 
-
 if __name__ == "__main__":
     app()
