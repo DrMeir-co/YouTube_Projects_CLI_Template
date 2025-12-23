@@ -2,10 +2,11 @@
 
 Requirements: Python 3.8+
 
-Install editable:
+Install for development:
 
 ```bash
-pip install -e .
+pip install -e .[dev]
+pre-commit install
 ```
 
 Learn how to use:
