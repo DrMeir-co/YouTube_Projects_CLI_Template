@@ -6,8 +6,14 @@ build-backend = "setuptools.build_meta"
 name = "juicy_tool_name"
 version = "0.0.0"
 description = "juicy_tool_name does very cool stuff."
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = ["typer"]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "mypy",
+]
 
 [project.scripts]
 juicy_tool_name = "juicy_tool_name.cli:app"
@@ -17,3 +23,13 @@ juicy_tool_name = "juicy_tool_name.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
