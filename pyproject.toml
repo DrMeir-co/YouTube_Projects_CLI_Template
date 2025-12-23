@@ -3,16 +3,19 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "juicy_tool_name"
+name = "keel"
 version = "0.0.0"
-description = "juicy_tool_name does very cool stuff."
-requires-python = ">=3.10"
+description = "investment policies simulator"
+requires-python = ">=3.8"
 dependencies = ["typer"]
 
 [project.optional-dependencies]
 dev = [
     "ruff",
     "mypy",
+    "pytest",
+    "pytest-cov",
+    "pre-commit",
 ]
 
 [project.scripts]
@@ -23,13 +26,3 @@ juicy_tool_name = "juicy_tool_name.cli:app"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-
-[tool.ruff]
-line-length = 88
-target-version = "py310"
-
-[tool.mypy]
-python_version = "3.10"
-warn_return_any = true
-warn_unused_configs = true
-disallow_untyped_defs = true
