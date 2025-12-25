@@ -6,7 +6,7 @@ def configure_logger(
     *,
     logfile: str,
     level: int = logging.ERROR,
-) -> logging.Logger:
+) -> tuple[logging.Logger, logging.FileHandler]:
     class TracebackWithLocalsFormatter(logging.Formatter):
         def formatException(self, ei):
             tb = traceback.TracebackException.from_exception(
