@@ -8,9 +8,9 @@ def configure_logger(
     level: int = logging.ERROR,
 ) -> logging.Logger:
     class TracebackWithLocalsFormatter(logging.Formatter):
-        def formatException(self, exc_info):
+        def formatException(self, ei):
             tb = traceback.TracebackException.from_exception(
-                exc_info[1], capture_locals=True
+                ei[1], capture_locals=True
             )
             return "".join(tb.format())
 
